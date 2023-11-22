@@ -14,14 +14,50 @@ function Education({ educations, setEducations }) {
     }
   };
 
+  const addEducation = (newEducation) => {
+    //Make a new array for re-rendering
+    let newList = [...educations, newEducation];
+    setEducations(newList);
+  };
+
+  const deleteEducation = (id) => {
+    let newList = educations.filter((education) => education.id != id);
+    setEducations(newList);
+  };
+
+  const editEducation = (newEducation) => {
+    //Get index
+    //Make a new array of IDs and get an index of the ID
+    const index = educations
+      .map((education) => education.id)
+      .indexOf(newEducation.id);
+    //Replace with updated object
+    educations.splice(index, 1, newEducation);
+    setEducations([...educations]);
+  };
+
   return (
     <div className="div-education">
       <h2 onClick={toggleEducationSection}>Education</h2>
-      {toggleEducation && (
-        <div className="education-items">
-          <AddEducation />
-        </div>
-      )}
+      <div
+        className="education-content"
+        style={{ display: toggleEducation ? "block" : "none" }}
+      >
+        {toggleEducation &&
+          educations.map((education) => (
+            <EducationItem
+              key={education.id}
+              education={education}
+              deleteEducation={deleteEducation}
+              editEducation={editEducation}
+            />
+          ))}
+        {toggleEducation && (
+          <div className="add-education">
+            <AddEducation addEducation={addEducation} />
+          </div>
+        )}
+      </div>
     </div>
   );
 }

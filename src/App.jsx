@@ -1,16 +1,27 @@
 import "./App.css";
-import General from "./Components/General";
+import General from "./Components/General/General";
 import Education from "./Components/Education/Education";
 import Experience from "./Components/Experience";
 import Main from "./Components/Main";
 import { useState } from "react";
+import { v4 as uuid } from "uuid";
 
 function App() {
+  const initial_education = [
+    {
+      id: uuid(),
+      school: "School of React",
+      study: "React programming",
+      start: "11 / 2023",
+      end: "12 / 2023",
+    },
+  ];
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
-  const [educations, setEducations] = useState([]);
+  const [educations, setEducations] = useState(initial_education);
 
   return (
     <>
@@ -25,7 +36,7 @@ function App() {
           address={address}
           setAddress={setAddress}
         />
-        <Education education={educations} setEducation={setEducations} />
+        <Education educations={educations} setEducations={setEducations} />
         <Experience />
       </div>
       <div className="mainCV">
