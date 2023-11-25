@@ -2,7 +2,9 @@
 
 CV Application from 'The Odin Project'
 
-# Used tools
+Users can enter their information and CV will be generated
+
+# Build tool
 
 Vite
 
@@ -16,6 +18,6 @@ ESLint
 
 # Used library
 
-React
-UUID
-MUI - material icons
+- React
+- UUID
+- MUI - material icons
