@@ -62,5 +62,4 @@
 
 .rotate-arrow {
   transform: rotate(180deg);
-  transition: transform 1s ease;
 }
