@@ -1,0 +1,49 @@
+.div-experience {
+  margin: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  background-color: #353535;
+  color: white;
+  box-shadow: 0px 0px 10px grey;
+}
+
+.div-experience-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-experience-header:hover {
+  cursor: pointer;
+}
+
+.form-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.div-experience-content {
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.div-experience-item {
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px white;
+  opacity: 0.8;
+}
+
+.div-experience-item:hover {
+  cursor: pointer;
+}
+
+.rotate-arrow {
+  transform: rotate(180deg);
+}

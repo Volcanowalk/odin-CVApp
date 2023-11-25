@@ -2,6 +2,7 @@ import "../../styles/Education.css";
 import EducationItem from "./EducationItem";
 import AddEducation from "./AddEducation";
 import { useState } from "react";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 function Education({ educations, setEducations }) {
   const [toggleEducation, setToggleEducation] = useState(false);
@@ -38,7 +39,12 @@ function Education({ educations, setEducations }) {
 
   return (
     <div className="div-education">
-      <h2 onClick={toggleEducationSection}>Education</h2>
+      <div className="education-header" onClick={toggleEducationSection}>
+        <h2>Education</h2>
+        <KeyboardArrowDownIcon
+          className={toggleEducation ? "rotate-arrow" : null}
+        />
+      </div>
       <div
         className="education-content"
         style={{ display: toggleEducation ? "block" : "none" }}

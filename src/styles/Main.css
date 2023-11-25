@@ -5,13 +5,14 @@
   font-size: 1rem;
   color: white;
   min-height: 100px;
+  padding-bottom: 20px;
 }
 
 h1 {
   font-size: 3rem;
 }
 
-.cv-education-header {
+.cv-section-header {
   background-color: #353535;
   margin: 10px;
   font-size: 1.5rem;
@@ -26,4 +27,34 @@ h1 {
   margin-bottom: 20px;
   margin-left: 5px;
   margin-right: 10px;
+}
+
+.display-education {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.display-study {
+  text-align: center;
+}
+
+.cv-education {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.display-experience {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.cv-experience {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.display-experience-date {
+  text-align: center;
 }
